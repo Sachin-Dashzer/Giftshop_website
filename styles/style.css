@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+:root {
+  --first: #000000;
+  --second: #fdfefd;
+  --third: #b625e8;
+  --fourth: #f1f1f1;
+  --headerfamily: "Patua One", cursive;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Assistant", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+i {
+  text-decoration: none;
+  color: var(--first);
+}
+
+h1,
+h2 {
+  font-size: 5.5rem;
+  font-family: var(--headerfamily);
+}
+
+h3 {
+  font-size: 3.5rem;
+  font-family: var(--headerfamily);
+}
+
+button {
+  padding: 1.4rem 2.8rem;
+  border-radius: 2rem;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  outline: none;
+  box-shadow: none;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+header {
+  width: 100%;
+  min-height: 60rem;
+  position: relative;
+  overflow: hidden;
+}
+header nav {
+  height: 10rem;
+  width: 100%;
+  line-height: 10rem;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 18rem;
+  background-color: rgba(255, 250, 250, 0.101);
+  cursor: pointer;
+  z-index: 4;
+  position: absolute;
+  top: -10rem;
+}
+header nav h1 {
+  font-family: var(--headerfamily);
+  color: var(--fourth);
+  text-shadow: var(--shadow);
+  font-size: 5rem;
+}
+header nav ul li {
+  display: inline-block;
+  margin: 0 2.4rem;
+  font-size: 2.2rem;
+}
+header nav ul li a {
+  font-weight: bold;
+  color: var(--first);
+}
+header nav ul li a:hover {
+  color: var(--second);
+  transition: 0.4s;
+}
+header section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 100%;
+}
+header section .himg {
+  height: 100vh;
+  background: linear-gradient(rgb(255, 255, 255), rgba(255, 250, 250, 0.1)), url("../images/gift.jpg");
+  background-size: cover;
+}
+header section .content {
+  position: relative;
+  background: linear-gradient(#b625e8, #f1f1f1);
+  color: var(--second);
+}
+header section .content .text {
+  position: absolute;
+  top: 32%;
+  left: 30%;
+}
+header section .content .text h2 {
+  font-size: 4.6rem;
+  color: var(--first);
+  font-family: var(--headerfamily);
+  margin: 1rem 0;
+  word-spacing: 0.3rem;
+}
+header section .content .text p {
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+  margin: 2.2rem 0;
+}
+header section .content .text p span {
+  color: var(--first);
+  font-weight: bolder;
+}
+header section .content .text button {
+  background-color: var(--first);
+  color: var(--fourth);
+  margin: 1.2rem 0;
+  margin-left: -0.5rem;
+}
+header section .content .text button:hover {
+  background-color: var(--second);
+  color: var(--first);
+  transition: 0.4s;
+}
+
+main {
+  min-height: 100vh;
+  padding-top: 6rem;
+}
+main #about {
+  height: 50rem;
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-gap: 4%;
+  padding: 0 20rem;
+}
+main #about .content {
+  padding: 13rem 1rem 0 10rem;
+}
+main #about .content h1 {
+  color: var(--third);
+}
+main #about .content p {
+  margin: 2rem 0;
+}
+main #about .content button {
+  background-color: var(--first);
+  color: var(--fourth);
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+main #about .content button:hover {
+  background-color: var(--fourth);
+  color: var(--first);
+  transition: 0.4s ease-in-out;
+}
+main #gifts {
+  min-height: 60rem;
+  transform: skewY(7deg);
+  background-color: var(--third);
+  position: relative;
+  margin: 15rem 0;
+}
+main #gifts .lol {
+  min-height: 60rem;
+  text-align: center;
+  padding: 13rem 24rem;
+  color: var(--second);
+  transform: skewY(-7deg);
+}
+main #gifts .lol p {
+  margin: 3rem 0;
+}
+main #gifts .lol .box1 {
+  height: 40rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 7rem 0;
+}
+main #gifts .lol .box1 .img {
+  height: 100%;
+  width: 47%;
+  position: relative;
+}
+main #gifts .lol .box1 .img .content {
+  width: 40rem;
+  min-height: 14rem;
+  padding: 3rem;
+  position: absolute;
+  background-color: var(--first);
+  color: var(--second);
+  left: 9%;
+  bottom: -18%;
+  text-align: justify;
+  border-radius: 2rem;
+}
+main #gifts .lol .box1 .img .content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: bolder;
+  font-family: var(--headerfamily);
+}
+main #gifts .lol .box1 .img .content h3 span {
+  color: var(--third);
+}
+main #gifts .lol .box1 .img .content p {
+  font-size: 1.6rem;
+  margin: 0;
+}
+main #gifts .lol button {
+  position: absolute;
+  bottom: -3.5%;
+  left: 44%;
+  padding: 1.6rem 5rem;
+  font-size: 2.4rem;
+  background-color: var(--first);
+  color: var(--fourth);
+}
+main #gifts .lol button:hover {
+  background-color: var(--fourth);
+  color: var(--first);
+  transition: 0.4s ease-in-out;
+}
+main #shop {
+  min-height: 40rem;
+  width: 100%;
+  padding: 0 10rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 6rem;
+  margin-top: 10rem;
+}
+main #shop .img {
+  height: 50rem;
+  width: 100vw;
+}
+main #shop .content {
+  height: 50rem;
+  padding-top: 7rem;
+}
+main #shop .content p {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+main #shop .content button {
+  padding: 1.6rem 5rem;
+  font-size: 2.4rem;
+  background-color: var(--third);
+  color: var(--second);
+  margin-top: 3.5rem;
+  font-weight: bolder;
+  border-color: var(--third);
+}
+main #shop .content button:hover {
+  background-color: var(--second);
+  color: var(--third);
+  transition: 0.4s ease-in-out;
+}
+main #contact {
+  width: 100%;
+  min-height: 50rem;
+  padding: 6rem 0rem;
+  margin-top: 10rem;
+  background: linear-gradient(rgba(212, 198, 198, 0.5), rgba(201, 192, 192, 0.599)), url("/images/gift1.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+main #contact .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45rem;
+  background-color: var(--third);
+  padding-left: 10rem;
+}
+main #contact .box .content {
+  width: 30%;
+  height: 100%;
+  padding-top: 8rem;
+  padding-left: 4rem;
+  margin: 0 auto;
+}
+main #contact .box .content h1 {
+  margin-bottom: 3rem;
+}
+main #contact .box .content input {
+  width: 18rem;
+  height: 6rem;
+  display: block;
+  text-align: center;
+  outline: none;
+  border-radius: 2rem;
+  border: none;
+  margin: 2rem 5rem;
+  font-weight: bolder;
+  background-color: var(--first);
+  color: var(--second);
+  font-size: 2.2rem;
+  letter-spacing: 0.28rem;
+}
+main #contact .box .content .first {
+  background: var(--second);
+  color: var(--first);
+}
+main #contact .box .map {
+  height: 100%;
+  width: 70%;
+}
+
+footer {
+  width: 100%;
+  min-height: 40rem;
+  padding: 5rem 16rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
+  gap: 2rem;
+  background-color: var(--first);
+  color: var(--fourth);
+}
+footer div h3 {
+  margin-bottom: 3rem;
+}
+footer div ul li {
+  list-style-type: disc;
+  font-size: 2rem;
+  line-height: 3.5rem;
+  margin-left: 1.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: var(--third);
+}
+footer div ul li:hover {
+  color: var(--second);
+  font-size: 2.2rem;
+  transition: 0.4s ease-in-out;
+}
+footer div img {
+  width: 10rem;
+  height: 10rem;
+  border: 0.5rem solid var(--third);
+  border-radius: 0.4rem;
+  margin-right: 1rem;
+}
+footer div img:hover {
+  opacity: 0.5;
+  transition: 0.4s ease-in-out;
+}
+footer div h4 {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+}
+footer div h4 span i {
+  color: var(--third);
+  font-size: 3.2rem;
+  margin-right: 1rem;
+}
+footer div input {
+  width: 16rem;
+  height: 4.5rem;
+  font-size: 2.1rem;
+  font-weight: bolder;
+  text-align: center;
+}
+footer div .submit {
+  width: 12rem;
+  background-color: var(--third);
+  color: var(--second);
+}
+footer .img {
+  display: grid;
+  grid-template-columns: 46% 46%;
+  grid-template-rows: 48% 48%;
+  grid-gap: 4%;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+
+:root {
+  --first: #000000;
+  --second: #fdfefd;
+  --third: #b625e8;
+  --fourth: #f1f1f1;
+
+  --headerfamily: "Patua One", cursive;
+}
+
+
+html{
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Assistant", sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+i {
+  text-decoration: none;
+  color: var(--first);
+}
+
+h1,
+h2 {
+  font-size: 5.5rem;
+  font-family: var(--headerfamily);
+}
+h3 {
+  font-size: 3.5rem;
+  font-family: var(--headerfamily);
+}
+
+button {
+  padding: 1.4rem 2.8rem;
+  border-radius: 2.0rem;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  outline: none;
+  box-shadow: none;
+}
+p {
+  font-size: 1.8rem;
+}
+
+header {
+  width: 100%;
+  min-height: 60.0rem;
+  position: relative;
+  overflow: hidden;
+
+  nav {
+    height: 10.0rem;
+    width: 100%;
+    line-height: 10.0rem;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 18.0rem;
+    background-color: rgba(255, 250, 250, 0.101);
+    cursor: pointer;
+    z-index: 4;
+    position: absolute;
+    top: -10.0rem;
+    
+
+    h1 {
+      font-family: var(--headerfamily);
+      color: var(--fourth);
+      text-shadow: var(--shadow);
+      font-size: 5.0rem;
+    }
+
+    ul li {
+      display: inline-block;
+      margin: 0 2.4rem;
+
+      font-size: 2.2rem;
+
+      a {
+        font-weight: bold;
+        color: var(--first);
+      }
+      a:hover {
+        color: var(--second);
+        transition: 0.4s;
+      }
+    }
+  }
+
+  section {
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+
+    .himg{
+      height: 100vh;
+
+      background: linear-gradient(rgba(255, 255, 255), rgba(255, 250, 250, 0.1)) ,  url('../images/gift.jpg');
+      background-size: cover;
+    }
+
+    .content {
+      position: relative;
+      background: linear-gradient(#b625e8, #f1f1f1);
+      color: var(--second);
+
+      .text {
+        position: absolute;
+        top: 32%;
+        left: 30%;
+
+        h2 {
+          font-size: 4.6rem;
+          color: var(--first);
+          font-family: var(--headerfamily);
+          margin: 1.0rem 0;
+          word-spacing: .3rem;
+        }
+        p {
+          font-size: 2.1rem;
+          font-weight: 600;
+          letter-spacing: .1rem;
+          word-spacing: .2rem;
+          margin: 2.2rem 0;
+
+          span {
+            color: var(--first);
+            font-weight: bolder;
+          }
+        }
+        button {
+          background-color: var(--first);
+          color: var(--fourth);
+          margin: 1.2rem 0;
+          margin-left: -.5rem;
+        }
+        button:hover {
+          background-color: var(--second);
+          color: var(--first);
+          transition: 0.4s;
+        }
+      }
+    }
+  }
+}
+
+main {
+  min-height: 100vh;
+  padding-top: 6.0rem;
+
+
+
+  #about {
+    height: 50.0rem;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 4%;
+    padding: 0 20.0rem;
+
+    .content {
+      padding: 13.0rem 1.0rem 0 10.0rem;
+      h1 {
+        color: var(--third);
+      }
+      p {
+        margin: 2.0rem 0;
+      }
+      button {
+        background-color: var(--first);
+        color: var(--fourth);
+        margin-top: .5rem;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: var(--fourth);
+        color: var(--first);
+        transition: 0.4s ease-in-out;
+      }
+    }
+  }
+
+  #gifts {
+    min-height: 60.0rem;
+    transform: skewY(7deg);
+    background-color: var(--third);
+    position: relative;
+    margin: 15.0rem 0;
+
+    .lol {
+      min-height: 60.0rem;
+      text-align: center;
+
+      padding: 13.0rem 24.0rem;
+      // padding-top: 13.0rem;
+      color: var(--second);
+      transform: skewY(-7deg);
+      p {
+        margin: 3.0rem 0;
+      }
+
+      .box1 {
+        height: 40.0rem;
+        display: flex;
+        // overflow: hidden;
+
+        justify-content: space-between;
+        align-items: center;
+        margin: 7.0rem 0;
+        // margin-bottom: 4.0rem;
+
+        .img {
+          height: 100%;
+          width: 47%;
+          position: relative;
+
+          .content {
+            width: 40.0rem;
+            min-height: 14.0rem;
+            padding: 3.0rem;
+            position: absolute;
+            background-color: var(--first);
+            color: var(--second);
+            left: 9%;
+            bottom: -18%;
+            text-align: justify;
+            border-radius: 2.0rem;
+            h3 {
+              font-size: 2.5rem;
+              margin-bottom: 1.2rem;
+              font-weight: bolder;
+              font-family: var(--headerfamily);
+              span {
+                color: var(--third);
+              }
+            }
+            p {
+              font-size: 1.6rem;
+              margin: 0;
+            }
+          }
+        }
+      }
+
+      button {
+        position: absolute;
+        bottom: -3.5%;
+        left: 44%;
+        padding: 1.6rem 5.0rem;
+        font-size: 2.4rem;
+        background-color: var(--first);
+        color: var(--fourth);
+      }
+      button:hover {
+        background-color: var(--fourth);
+        color: var(--first);
+        transition: 0.4s ease-in-out;
+      }
+    }
+  }
+
+  #shop {
+    min-height: 40.0rem;
+    width: 100%;
+    padding: 0 10.0rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 6.0rem;
+    margin-top: 10.0rem;
+
+    .img {
+      height: 50.0rem;
+      width: 100vw;
+    }
+    .content {
+      height: 50.0rem;
+      padding-top: 7.0rem;
+      p {
+        margin-top: 2.0rem;
+        font-size: 2.0rem;
+      }
+      button {
+        padding: 1.6rem 5.0rem;
+        font-size: 2.4rem;
+        background-color: var(--third);
+        color: var(--second);
+        margin-top: 3.5rem;
+        font-weight: bolder;
+        border-color: var(--third);
+      }
+      button:hover {
+        background-color: var(--second);
+        color: var(--third);
+        transition: 0.4s ease-in-out;
+      }
+    }
+  }
+
+  #contact {
+    width: 100%;
+    min-height: 50.0rem;
+    padding: 6.0rem .0rem;
+    margin-top: 10.0rem;
+    background: linear-gradient(rgba(212, 198, 198, 0.5) , rgba(201, 192, 192, 0.599)) , url("/images/gift1.jpg");
+    background-size: cover;
+    overflow: hidden;
+
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 45.0rem;
+        background-color: var(--third);
+        padding-left: 10.0rem;
+
+
+        .content{
+            width: 30%;
+            height: 100%;
+            padding-top: 8.0rem;
+            padding-left: 4.0rem;
+            margin: 0 auto;
+            h1{
+                margin-bottom: 3.0rem;
+            }
+
+            input{
+                width: 18.0rem;
+                height: 6.0rem;
+                display: block;
+                text-align: center;
+                outline: none;
+                border-radius: 2.0rem;
+                border: none;
+                margin: 2.0rem 5.0rem;
+                font-weight: bolder;
+                background-color: var(--first);
+                color: var(--second);
+
+                font-size: 2.2rem;
+                letter-spacing: 0.28rem;
+                
+
+            }
+            .first{
+                background: var(--second);
+                color: var(--first);
+            }
+
+            
+        }
+       
+      .map {
+        height: 100%;
+        width: 70%;
+      }
+    }
+  }
+}
+
+
+footer{
+
+    width: 100%;
+    min-height: 40.0rem;
+    padding: 5.0rem 16.0rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    gap: 2.0rem;
+    background-color: var(--first);
+    color: var(--fourth);
+
+    div{
+
+
+      h3{
+        margin-bottom: 3.0rem;
+      }
+      ul li{
+        list-style-type: disc;
+        font-size: 2.0rem;
+        line-height: 3.5rem;
+        margin-left: 1.5rem;
+        text-transform: capitalize;
+        cursor: pointer;
+        color: var(--third);
+      }
+      ul li:hover{
+        color: var(--second);
+        font-size: 2.2rem;
+        transition: 0.4s ease-in-out;
+      }
+      img{
+        width: 10.0rem;
+        height: 10.0rem;
+        border: .5rem solid var(--third);
+        border-radius: .4rem;
+        margin-right: 1.0rem;
+      }
+      img:hover{
+        opacity: 0.5;
+        transition: 0.4s ease-in-out;
+      }
+      h4{
+        font-size: 2.0rem;
+        margin: 1.5rem 0;
+        span i{
+          color: var(--third);
+          font-size: 3.2rem;
+          margin-right: 1.0rem;
+        }
+      }
+      input{
+        width: 16.0rem;
+        height: 4.5rem;
+        font-size: 2.1rem;
+        font-weight: bolder;
+        text-align: center;
+        
+      }
+      .submit{
+        width: 12.0rem;
+        background-color: var(--third);
+        color: var(--second);
+      }
+
+    }
+
+    .img{
+      display: grid;
+      grid-template-columns: 46% 46%;
+      grid-template-rows: 48% 48%;
+      grid-gap: 4%;
+      
+      // gap: 4%;
+    }
+
+
+}
