@@ -62,23 +62,22 @@ p {
 
 header {
   width: 100%;
-  min-height: 60rem;
+  min-height: 30rem;
   position: relative;
   overflow: hidden;
 }
 header nav {
   height: 10rem;
   width: 100%;
-  line-height: 10rem;
-  opacity: 0;
   display: flex;
   justify-content: space-between;
-  padding: 0 18rem;
+  align-items: center;
+  padding: 0 12rem;
+  padding-right: 19rem;
   background-color: rgba(255, 250, 250, 0.101);
   cursor: pointer;
   z-index: 4;
   position: absolute;
-  top: -10rem;
 }
 header nav h1 {
   font-family: var(--headerfamily);
@@ -86,38 +85,54 @@ header nav h1 {
   text-shadow: var(--shadow);
   font-size: 5rem;
 }
+header nav ul {
+  display: flex;
+}
 header nav ul li {
   display: inline-block;
   margin: 0 2.4rem;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
 header nav ul li a {
   font-weight: bold;
   color: var(--first);
+  position: relative;
 }
-header nav ul li a:hover {
-  color: var(--second);
-  transition: 0.4s;
+header nav ul li a::after {
+  content: "";
+  width: 100%;
+  height: 1.5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--first);
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.4s ease;
+}
+header nav ul li a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom right;
+}
+header nav ul #menubutton {
+  display: none;
 }
 header section {
   display: grid;
   grid-template-columns: 50% 50%;
-  height: 100%;
 }
 header section .himg {
-  height: 100vh;
+  height: 73rem;
   background: linear-gradient(rgb(255, 255, 255), rgba(255, 250, 250, 0.1)), url("../images/gift.jpg");
   background-size: cover;
 }
 header section .content {
-  position: relative;
   background: linear-gradient(#b625e8, #f1f1f1);
   color: var(--second);
 }
 header section .content .text {
-  position: absolute;
-  top: 32%;
-  left: 30%;
+  padding-top: 30%;
+  padding-left: 28%;
 }
 header section .content .text h2 {
   font-size: 4.6rem;
@@ -254,17 +269,15 @@ main #shop {
   padding: 0 10rem;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
   gap: 6rem;
-  margin-top: 10rem;
+  margin-top: 20rem;
 }
 main #shop .img {
-  height: 50rem;
-  width: 100vw;
+  height: 40rem;
+  width: 80rem;
 }
 main #shop .content {
   height: 50rem;
-  padding-top: 7rem;
 }
 main #shop .content p {
   margin-top: 2rem;
@@ -343,6 +356,7 @@ footer {
   justify-content: space-evenly;
   align-self: center;
   gap: 2rem;
+  flex-wrap: wrap;
   background-color: var(--first);
   color: var(--fourth);
 }
@@ -400,4 +414,148 @@ footer .img {
   grid-template-columns: 46% 46%;
   grid-template-rows: 48% 48%;
   grid-gap: 4%;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 6px;
+  }
+  header nav {
+    padding: 0 10rem;
+  }
+  header nav ul li i {
+    font-size: 3.3rem;
+  }
+  header nav ul #menubar {
+    position: absolute;
+    top: 80%;
+    right: -23%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 5rem;
+    background-color: rgb(255, 250, 250);
+    text-align: center;
+    z-index: 8;
+  }
+  header nav ul #menubar li {
+    display: block;
+  }
+  header nav ul #menubar li a {
+    font-size: 3.2rem;
+    line-height: 1.8;
+  }
+  header section .content {
+    width: 100%;
+    min-height: 70rem;
+  }
+  header section .content .text {
+    padding-left: 20%;
+    padding-bottom: 15%;
+    padding-top: 35%;
+  }
+  main #gifts .lol {
+    padding: 16rem 14rem;
+  }
+  footer {
+    padding: 14rem 16rem;
+    gap: 20rem;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 3px;
+  }
+  h1,
+  h2 {
+    font-size: 7rem;
+  }
+  h3 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 2.4rem;
+  }
+  button {
+    padding: 2rem 3.6rem;
+    font-size: 2.2rem;
+  }
+  header {
+    min-height: 80rem;
+    overflow: visible;
+  }
+  header nav {
+    height: 13rem;
+  }
+  header nav li i {
+    font-size: 3.4rem;
+  }
+  header section .content {
+    width: 100%;
+    min-height: 70rem;
+  }
+  header section .content .text {
+    padding-left: 25%;
+    padding-bottom: 15%;
+    padding-top: 40%;
+  }
+  header section .himg {
+    width: 100%;
+    background-size: 100% 110%;
+  }
+  main {
+    padding-top: 12rem;
+  }
+  main #about {
+    padding: 0 12rem;
+    grid-template-columns: 46% 46%;
+    gap: 8%;
+  }
+  main #about img {
+    margin-top: 8rem;
+  }
+  main #gifts {
+    margin-top: 35rem;
+    transform: skewY(6deg);
+  }
+  main #gifts .lol {
+    padding: 16rem 12rem;
+  }
+  main #gifts .lol botton {
+    padding: 4rem 6rem;
+    font-size: 3rem;
+    background-color: red;
+  }
+  main #shop {
+    margin: 29rem 0;
+    margin-bottom: 24rem;
+  }
+  main #shop .img {
+    width: 150rem;
+    height: 60rem;
+  }
+  main #shop .content p {
+    font-size: 2.8rem;
+  }
+  main #contact {
+    height: 72rem;
+  }
+  main #contact .box {
+    height: 60rem;
+    padding-left: 10rem;
+  }
+  main #contact .box .content {
+    width: 60rem;
+  }
+  main #contact .box .content input {
+    width: 18rem;
+    height: 8rem;
+    margin-top: 3rem;
+  }
+  footer {
+    padding: 10rem 16rem;
+    gap: 18rem;
+  }
 }/*# sourceMappingURL=style.css.map */
