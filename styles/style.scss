@@ -339,12 +339,8 @@ main {
     min-height: 50rem;
     padding: 6rem 0rem;
     margin-top: 10rem;
-    background: linear-gradient(
-        rgba(212, 198, 198, 0.5),
-        rgba(201, 192, 192, 0.599)
-      ),
-      url("/images/gift1.jpg");
-    background-size: cover;
+    background-color: #e5d1ed;
+
     overflow: hidden;
 
     .box {
