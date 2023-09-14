@@ -429,6 +429,10 @@ footer .img {
   header nav ul li i {
     font-size: 3.3rem;
   }
+  header nav ul #menubutton {
+  display: block;
+  }
+
   header nav ul #menubar {
     position: absolute;
     top: 80%;
